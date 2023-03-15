@@ -1,0 +1,392 @@
+body{
+    box-sizing: border-box;
+    margin: o;
+    padding: 0;
+    height: 100vh;
+    font-family: noto sans, sans-serif;
+    
+}
+/*comienza las clases reutilizables*/
+.btn-azul{
+    text-decoration: none;
+    color: white;
+    font-size: 0.8rem;
+    font-family: 'montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: blue;
+    padding: 1rem 2rem;
+    display: inline-block;
+    align-self: center;
+
+}
+.frase{
+    text-align: center;
+}
+/*termina los reutilizables*/
+
+#primera-seccion{
+    background: linear-gradient(rgba(68,13,13,0.35),rgba(38,2,2,0.446)),url(imagenes/colegio3.jpeg) no-repeat center/cover;
+    background-attachment: fixed;
+    height: 100vh;
+    color: white;
+}
+#barra-navegacion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto 5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+ #logo{
+    margin:-150px;
+ }
+ nav>a{
+text-decoration: none;
+color: white;
+padding-left: 1rem;
+padding-right: 1rem;
+
+ }
+ nav>a:hover{
+color: blue;
+ }
+ #primera-seccion-contenido{
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+ }
+ #primera-seccion-contenido>p{
+text-transform: capitalize;
+font-family: 'montserrat',sans-serif;
+font-size: 1.5rem;
+margin-bottom: 0.5rem;
+font-weight: bold;
+
+ }
+ #primera-seccion-contenido>hr{
+    width: 12rem;
+    border-color: blue;
+ }
+ #primera-seccion-contenido>h1{
+    font-family: 'montserrat',sans-serif;
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    
+ }
+ /*termina primera seccion*/
+
+ /*comineza la segunda seccion*/
+
+ #segunda-seccion{
+    background-color: grey;
+    min-height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+ }
+ /*termina segunda seccion*/
+ /*comienza tercera seccion*/
+ #terceraseccion{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+ }
+
+#titulo{
+    margin-bottom: 2rem;
+
+}
+
+#titulo > h2{
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'montserrat',sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+#titulo > hr{
+    width: 4.5;
+    border-color: blue;
+
+}
+
+#container-tercera-seccion{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.img-tercera{
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.img-tercera > h6{
+    text-align: center;
+    font-family: 'montserrat',sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+
+}
+.img-tercera > p{
+margin-bottom: 2rem;
+}
+.img-tercera > img{
+    max-width: 100%;
+}
+/*termina tercera seccion*/
+
+/*comienza la cuarta seccion*/
+#cuarta-seccion{
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0.5)),url(imagenes/colegio3.jpeg) no-repeat center/cover;
+    background-attachment: fixed;
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+#contenedor{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.mitad{
+    width: 50%;
+}
+
+#cuarta-seccion-derecha > h3{
+    text-transform: uppercase;
+    font-family: 'montserrat',sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+
+}
+#cuarta-seccion-derecha > hr{
+    width: 4.5rem;
+    border-color: blue;
+    margin-left: o;
+    margin-bottom: 3rem;
+}
+
+#cuarta-seccion-derecha >p{
+    margin-bottom: 4rem;
+}
+/*termina cuarta seccion*/
+
+/*empieza quinta seccion*/
+
+#quinta-seccion{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+#quinta-seccion-izquierda{
+flex: 1;
+}
+
+#quinta-seccion-izquierda > h3{
+    text-transform: uppercase;
+    font-family: 'montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+#quinta-seccion-izquierda >p{
+    margin-bottom: 4rem;
+}
+
+#quinta-seccion-derecha{
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(2.1fr);
+    gap: 15px 10px;
+    justify-items: center;
+    align-items: center;
+}
+
+#quinta-seccion-derecha > img{
+    max-width: 100%;
+}
+#quinta-seccion-derecha > hr{
+    width: 4.5rem;
+    border-color: blue;
+    margin-left: 0;
+    margin-bottom: 3rem;
+
+}
+/*acabamos quinta seccion*/
+/*empezamos footer*/
+footer{
+    background-color: black;
+    color: white;
+    padding-top: 1.2;
+    padding-bottom: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.menu-atletismo a{
+    color: black;
+    background-color: white;
+    color: black;
+    padding : 1rem;
+    border-radius: 2rem;
+    margin : 5rem;
+}
+.menu-baloncesto a{
+    color: black;
+    background-color: white;
+    color: black;
+    padding : 1rem;
+    border-radius: 2rem;
+    margin : 4rem;
+}
+.menu-futbol a{
+    background-color: white;
+    color: black;
+    padding : 1rem;
+    border-radius: 2rem;
+    margin : 4rem;
+}
+
+.menu-futbol{
+    margin : 4rem ;
+    
+}
+.menu-voleibol a{
+    color: black;
+    background-color: white;
+    color: black;
+    padding : 1rem;
+    border-radius: 2rem;
+    margin : 4rem;
+}
+#logo{
+    position: absolute;
+    right: 11.5%;
+    top: 17%;
+    background-color: transparent;
+}
+
+.menu-principal a {
+    background-color: white;
+    color: black;
+    padding : 1rem;
+    border-radius: 2rem;
+    margin : 4rem;
+}
+.fondo-futbol{
+    background-image: url(imagenes/futbol2.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.fondo-atletismo{
+    background-image: url("./imagenes/atletismo3.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.fondo-baloncesto{
+    background-image: url(imagenes/baloncesto.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    width: 100vw;
+}
+.fondo-voleibol{
+    background-image: url(imagenes/voleibol4.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.video-futbol{
+    position: absolute;
+    left: 30%;
+    top: 50%;
+}
+.titulo-futbol,.titulo-atletismo,.titulo-voleibol{
+    color: white;
+    text-align: center;
+    font-size: 5rem;
+}
+.reglas-futbol{
+    position: absolute;
+    top: 115%;
+    left: 10%;
+}
+.video-baloncesto{
+    position: absolute;
+    left: 5%;
+    top: 70%;
+}
+.reglas-baloncesto{
+    position: absolute;
+    top: 140%;
+    left: 10%;
+}
+.video-voleibol{
+    position: absolute;
+    left: 20%;
+    top: 50%;
+}
+.reglas-voleibol{
+    position: absolute;
+    top: 110%;
+    left: 10%;
+}
+.cancha-voleibol{
+    position: absolute;
+    top: 220%;
+    left: 10%;
+}
+.video-atletismo{
+    position: absolute;
+    left: 30%;
+    top: 40%;
+}
+.reglas-atletismo{
+    position: absolute;
+    top: 115%;
+    left: 10%;
+}
+
+#preg{
+    color: red;
+    
+}
+#dato{
+    border-radius: 2rem;
+    padding : 1rem;
+}
+ 
+#boton{
+    padding : 1rem;
+}
+
+#resolucion{
+    color: yellow;
+    padding : 1rem;
+}

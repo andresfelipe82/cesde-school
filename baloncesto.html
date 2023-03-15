@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"href="style.css">
+    <title>educacion fisica</title>
+</head>
+<body class="fondo-baloncesto">
+    <div id="primera seccion">
+    <div id="barra navegacion">
+    <h1>Escuela de Baloncesto</h1>
+    
+    
+    <nav class="menu-baloncesto">
+        <a href="index.html">Inicio</a>
+        <a href="futbol.html">Futbol</a>
+        <a href="baloncesto.html">Baloncesto</a>
+        <a href="voleibol.html">Voleibol</a>
+        <a href="atletismo.html">Atletismo</a>
+    </nav>
+    </div>
+    </div>
+    <iframe class="video-baloncesto" width="600" height="300" src="https://www.youtube.com/embed/Fp_8Na4oF2Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <img class="reglas-baloncesto" src="imagenes/rebaloncesto.png">
+
+     
+    <h1 id="preg"></h1>
+    <input type="text" id="dato">
+    <button id="boton">siguiente pregunta</button>
+    <p id="resolucion"></p>
+
+    <script>
+
+        var preguntas = [
+            ['¿cual es la mejor liga de baloncesto del mundo?', 'nba'],
+            ['¿cuantos jugadores juegan un partido de balonces?', '10'],
+            ['¿cuantos cambios se pueden hacer en un partido de baloncesto?', 'ilimitado'],
+            ['¿cuantos tiempos o periodos tiene un partido de balonces?', '4'],
+            ['¿en que equipo y ciudad fue mas campeon michael jordan?', 'bulls de chicago'],
+        ],
+        pregunta, respuesta,
+        formuladas = 0,
+        acertadas = 0,
+        i;
+
+        hazpregunta();
+
+
+
+        document.getElementById('boton').addEventListener('click', function(){
+            var entrada = document.getElementById('dato').value;
+        
+        if(entrada == respuesta){
+            acertadas++;
+        }
+
+        if(formuladas < 5){
+            hazpregunta();
+        }
+
+        else{
+            muestraresultado();
+        }
+        });
+
+        function hazpregunta(){
+            var e;
+            e = preguntas.splice( numaleat(0, preguntas.length-1), 1 );
+            pregunta = e[0][0];
+            respuesta = e[0][1];
+
+            document.getElementById('preg').innerHTML = pregunta;
+            document.getElementById('dato').value = '';
+            formuladas++;
+
+        }
+
+
+        function muestraresultado(){
+            var resultado;
+
+            switch(acertadas){
+                case 0:
+                resultado = 'no has acertado una sola pregunta, toca estudiar :-/';
+                break;
+                case 1:
+                resultado ='bueno, al menos has acertado una pregunta :-)';
+                break;
+                case 2:
+                resultado =' solo dos preguntas acertadas de 5. toca mejorar.';
+                break;
+                case 3: 
+                resultado ='no esta mal, 3/5 acertadas.';
+                break;
+                case 4:
+                resultado ='muy bien, has acertado 4 preguntas :-)';
+                break;
+                case 5:
+                resultado = '¡EXCELENTE, has acertado todas las preguntas!';
+                break;
+
+                }
+            
+
+            document.getElementById('resolucion').innerHTML = resultado;
+        }
+
+
+        function numaleat(min, max){
+            return Math.floor( Math.random() * (max - min + 1)) + min;
+        }
+        
+        </script>
+        
+
+
+
+    

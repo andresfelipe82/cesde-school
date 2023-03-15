@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"href="style.css">
+    <title>educacion fisica</title>
+</head>
+<body class="fondo-voleibol">
+    <div id="primera seccion">
+    <div id="barra navegacion">
+        <h1 class="titulo-voleibol"> Escuela de Voleibol</h1>
+    
+    <nav class="menu-voleibol">
+        <a href="Index.html">Inicio</a>
+        <a href="Futbol.html">Futbol</a>
+        <a href="Baloncesto.html">Baloncesto</a>
+        <a href="Voleibol.html">Voleibol</a>
+        <a href="Atletismo.html">Atletismo</a>
+    </nav>
+    </div>
+    </div>
+    <iframe class="video-voleibol" width="600" height="400" src="https://www.youtube.com/embed/T08dXv9vZqI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <img class="reglas-voleibol" src="imagenes/revoleibol.webp">
+    <img class="cancha-voleibol" src="imagenes/cancha-voleibol.jpeg">
+
+
+
+
+     
+    <h1 id="preg"></h1>
+    <input type="text" id="dato">
+    <button id="boton">siguiente pregunta</button>
+    <p id="resolucion"></p>
+
+    <script>
+
+        var preguntas = [
+            ['¿cuantos jugadores participan en la cancha de voleibol?', '12'],
+            ['¿cuantas veces se puede golpear el balon en voleibol?', '1'],
+            ['¿cuantos arbitros pitan un partido de voleibol?', '4'],
+            ['¿cuantos puntos se necesita para ganar un set?', '25'],
+            ['¿donde se invento el voleibol?', 'atenas'],
+        ],
+        pregunta, respuesta,
+        formuladas = 0,
+        acertadas = 0,
+        i;
+
+        hazpregunta();
+
+
+
+        document.getElementById('boton').addEventListener('click', function(){
+            var entrada = document.getElementById('dato').value;
+        
+        if(entrada == respuesta){
+            acertadas++;
+        }
+
+        if(formuladas < 5){
+            hazpregunta();
+        }
+
+        else{
+            muestraresultado();
+        }
+        });
+
+        function hazpregunta(){
+            var e;
+            e = preguntas.splice( numaleat(0, preguntas.length-1), 1 );
+            pregunta = e[0][0];
+            respuesta = e[0][1];
+
+            document.getElementById('preg').innerHTML = pregunta;
+            document.getElementById('dato').value = '';
+            formuladas++;
+
+        }
+
+
+        function muestraresultado(){
+            var resultado;
+
+            switch(acertadas){
+                case 0:
+                resultado = 'no has acertado una sola pregunta, toca estudiar :-/';
+                break;
+                case 1:
+                resultado ='bueno, al menos has acertado una pregunta :-)';
+                break;
+                case 2:
+                resultado =' solo dos preguntas acertadas de 5. toca mejorar.';
+                break;
+                case 3: 
+                resultado ='no esta mal, 3/5 acertadas.';
+                break;
+                case 4:
+                resultado ='muy bien, has acertado 4 preguntas :-)';
+                break;
+                case 5:
+                resultado = '¡EXCELENTE, has acertado todas las preguntas!';
+                break;
+
+                }
+            
+
+            document.getElementById('resolucion').innerHTML = resultado;
+        }
+
+
+        function numaleat(min, max){
+            return Math.floor( Math.random() * (max - min + 1)) + min;
+        }
+        
+        </script>
+        
+</body>
